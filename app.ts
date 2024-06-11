@@ -15,3 +15,7 @@ app.post("/events", (request, response) => {
   event._id = 10;
   return response.status(201).json({ event });
 });
+
+app.delete("/events/:id", (_request, response) => {
+  return response.status(204).send();
+});

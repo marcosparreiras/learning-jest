@@ -29,4 +29,9 @@ describe("Event Api", () => {
       })
     );
   });
+
+  it("Should be able to delete an event", async () => {
+    const response = await request(app).delete("/events/1");
+    expect(response.statusCode).toBe(204);
+  });
 });
